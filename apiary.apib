@@ -1,0 +1,2993 @@
+FORMAT: 1A
+HOST: http://api.mv2.domain/api/v3/
+
+# MV3 - Web
+
+MV3 utilizes JWT Authentication which generates token on user sign in. Token is required for most requests.
+Token can be send as `token` parameter as query string or as header in such format `Authorization: Bearer {system-generated-token}`.
+
+When sending request with body of JSON headers should contain `Content-Type: application/json`.
+
+## Group Property
+## Property List [/companies/{customerId}/portfolios/{portfolioId}/properties]
+### Property List [GET]
+Get list of Property.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": [
+                    {
+                        "kpi": {
+                            "lettableArea": "8000.00",
+                            "value": "29600000",
+                            "occupiedArea": 5400,
+                            "annualIncome": "1141291.00",
+                            "occupationRate": 67.5,
+                            "propertyValue": "29600000",
+                            "numberOfTenant": 3,
+                            "propertyDebt": "8880000",
+                            "averageFaceRentSignature": 209.03740740740741,
+                            "averageFaceRent": 207.36305886549633,
+                            "averageEconomicRentSignature": 0,
+                            "currentCapexProgram": "1500000",
+                            "recoverableChargeTax": "52",
+                            "erv": "200",
+                            "wale": {
+                                "kpi1": 4.156643835616438,
+                                "kpi2": 4.285024517946318,
+                                "kpi3": 6.157990867579908,
+                                "kpi4": 6.237386137187484,
+                                "kpi5": 2.606164383561644,
+                                "kpi6": 2.4681927016681837,
+                                "kpi7": 3.8609842719431757,
+                                "kpi8": 3.5927614595472246,
+                                "kpi1WaltAreaIncludeVacancy": 4.156643835616438,
+                                "kpi2WaltRentIncludeVacancy": 4.285024517946318,
+                                "kpi3WaltAreaExcludeVacancy": 6.157990867579908,
+                                "kpi4WaltRentExcludeVacancy": 6.237386137187484,
+                                "kpi5WalbAreaIncludeVacancy": 2.606164383561644,
+                                "kpi6WalbRentIncludeVacancy": 2.4681927016681837,
+                                "kpi7WalbAreaExcludeVacancy": 3.8609842719431757,
+                                "kpi8WalbRentExcludeVacancy": 3.5927614595472246
+                            }
+                        },
+                        "id": 130,
+                        "name": "Lyon 2",
+                        "crlOption": false,
+                        "code": "Lyon 2",
+                        "address": {
+                            "id": 505,
+                            "address1": "58, Avenue Salvador Allende",
+                            "address2": null,
+                            "zipcode": "69500",
+                            "city": "Bron",
+                            "country": "France",
+                            "lat": 45.7398083,
+                            "lng": 4.9274098
+                        },
+                        "images": [
+                            "uploads/properties/1505814944_74c11df7b2524d27b96c6290d791371b.png"
+                        ],
+                        "unit": "m²",
+                        "currency": {
+                            "id": 1,
+                            "code": "€",
+                            "name": "Euro"
+                        },
+                        "constructionYear": "2017",
+                        "restructurationYear": [],
+                        "typology": {
+                            "id": 2,
+                            "code": "2",
+                            "hasLoyer": true,
+                            "label": "Bureaux"
+                        },
+                        "sdp": 8000,
+                        "numberOfParking": 150,
+                        "measurementUnit": {
+                            "id": 1,
+                            "code": "m²",
+                            "name": "square meter",
+                            "meterConversionRate": 1
+                        },
+                        "company": {
+                            "id": 0,
+                            "address": {
+                                "id": 0,
+                                "address1": null,
+                                "address2": null,
+                                "zipcode": null,
+                                "city": null,
+                                "country": null,
+                                "lat": 0,
+                                "lng": 0
+                            },
+                            "fullName": null,
+                            "tradeName": null,
+                            "raisonSociale": {
+                                "id": 0,
+                                "code": null,
+                                "label": null
+                            },
+                            "intercommunityVat": null,
+                            "naf": null,
+                            "siren": null,
+                            "vat": null,
+                            "vatOption": null
+                        },
+                        "coPro": false,
+                        "coProCompanyName": null,
+                        "coProContactName": null,
+                        "coProContactEmail": null,
+                        "coProContactPhone": null,
+                        "volumeDivided": false,
+                        "asl": false,
+                        "aful": false,
+                        "servitude": false,
+                        "zac": false,
+                        "igh": false,
+                        "erp": false,
+                        "icpe": false,
+                        "rie": false,
+                        "subdivision": false,
+                        "commercialUrbanism": false,
+                        "expertiseCIBE": false,
+                        "cotationCIBE": 0,
+                        "expertiseCELOG": false,
+                        "cotationCELOG": 0,
+                        "greenCertificationOption": false,
+                        "hqe": false,
+                        "leed": false,
+                        "breeam": false,
+                        "buildingOption": false,
+                        "numberBuilding": 1,
+                        "buildingList": null,
+                        "totalArea": 0,
+                        "publicPageOption": false,
+                        "publicPage": {
+                            "id": 0,
+                            "imagesActive": false,
+                            "buildingAddressActive": false,
+                            "buildingAddress": null,
+                            "googleEarthLinkActive": false,
+                            "googleEarthLink": null,
+                            "geolocActive": false,
+                            "geolocLat": 0,
+                            "geolocLng": 0,
+                            "buildingDescriptionActive": false,
+                            "buildingDescription": null,
+                            "buildingZoneDescriptionActive": false,
+                            "buildingZoneDescription": null,
+                            "publicTransportationAccessActive": false,
+                            "publicTransportationAccess": null,
+                            "amenitiesActive": false,
+                            "amenitiesConference": false,
+                            "amenitiesElectricalPlug": false,
+                            "amenitiesGarden": false,
+                            "amenitiesCorporateRestaurant": false,
+                            "amenitiesCafetaria": false,
+                            "amenitiesBikeRoom": false,
+                            "amenitiesFitnessCenter": false,
+                            "amenitiesRetail": false,
+                            "amenitiesConciergeServices": false,
+                            "amenitiesErp": false,
+                            "lettableAreaActive": false,
+                            "lettableArea": 0,
+                            "lettableAreaDetailsActive": false,
+                            "lettableAreaDetails": null,
+                            "propertyValueActive": false,
+                            "propertyValue": null,
+                            "occupationRateActive": false,
+                            "occupationRate": null,
+                            "occupiedSpacesActive": false,
+                            "occupiedSpaces": null,
+                            "vacantSpacesActive": false,
+                            "vacantSpaces": null,
+                            "averageFloorAreaActive": false,
+                            "averageFloorArea": null,
+                            "numberOfFloorActive": false,
+                            "numberOfFloor": null,
+                            "stackingPlanActive": false,
+                            "stackingPlanTenantActive": false,
+                            "brokerActive": false,
+                            "propertyManagerActive": false,
+                            "assetManagerActive": false,
+                            "websiteActive": false,
+                            "website": null
+                        },
+                        "tempValue": "29600000",
+                        "tempDebt": "8880000",
+                        "tempCapex": "1500000",
+                        "tempCharges": "52",
+                        "tempErv": "200",
+                        "propertyLocales": []
+                    }
+                ]
+            }
+
+## Property Detail [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}]
+### Property Detail [GET]
+Get detail of Property.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "kpi": {
+                        "lettableArea": "8000.00",
+                        "value": "29600000",
+                        "occupiedArea": 5400,
+                        "annualIncome": "1141291.00",
+                        "occupationRate": 67.5,
+                        "propertyValue": "29600000",
+                        "numberOfTenant": 3,
+                        "propertyDebt": "8880000",
+                        "averageFaceRentSignature": 209.03740740740741,
+                        "averageFaceRent": 207.36305886549633,
+                        "averageEconomicRentSignature": 0,
+                        "currentCapexProgram": "1500000",
+                        "recoverableChargeTax": "52",
+                        "erv": "200",
+                        "wale": {
+                            "kpi1": 4.156643835616438,
+                            "kpi2": 4.285024517946318,
+                            "kpi3": 6.157990867579908,
+                            "kpi4": 6.237386137187484,
+                            "kpi5": 2.606164383561644,
+                            "kpi6": 2.4681927016681837,
+                            "kpi7": 3.8609842719431757,
+                            "kpi8": 3.5927614595472246,
+                            "kpi1WaltAreaIncludeVacancy": 4.156643835616438,
+                            "kpi2WaltRentIncludeVacancy": 4.285024517946318,
+                            "kpi3WaltAreaExcludeVacancy": 6.157990867579908,
+                            "kpi4WaltRentExcludeVacancy": 6.237386137187484,
+                            "kpi5WalbAreaIncludeVacancy": 2.606164383561644,
+                            "kpi6WalbRentIncludeVacancy": 2.4681927016681837,
+                            "kpi7WalbAreaExcludeVacancy": 3.8609842719431757,
+                            "kpi8WalbRentExcludeVacancy": 3.5927614595472246
+                        }
+                    },
+                    "id": 130,
+                    "name": "Lyon 2",
+                    "crlOption": false,
+                    "code": "Lyon 2",
+                    "address": {
+                        "id": 505,
+                        "address1": "58, Avenue Salvador Allende",
+                        "address2": null,
+                        "zipcode": "69500",
+                        "city": "Bron",
+                        "country": "France",
+                        "lat": 45.7398083,
+                        "lng": 4.9274098
+                    },
+                    "images": [
+                        "uploads/properties/1505814944_74c11df7b2524d27b96c6290d791371b.png"
+                    ],
+                    "unit": "m²",
+                    "currency": {
+                        "id": 1,
+                        "code": "€",
+                        "name": "Euro"
+                    },
+                    "constructionYear": "2017",
+                    "restructurationYear": [],
+                    "typology": {
+                        "id": 2,
+                        "code": "2",
+                        "hasLoyer": true,
+                        "label": "Bureaux"
+                    },
+                    "sdp": 8000,
+                    "numberOfParking": 150,
+                    "measurementUnit": {
+                        "id": 1,
+                        "code": "m²",
+                        "name": "square meter",
+                        "meterConversionRate": 1
+                    },
+                    "company": {
+                        "id": 0,
+                        "address": {
+                            "id": 0,
+                            "address1": null,
+                            "address2": null,
+                            "zipcode": null,
+                            "city": null,
+                            "country": null,
+                            "lat": 0,
+                            "lng": 0
+                        },
+                        "fullName": null,
+                        "tradeName": null,
+                        "raisonSociale": {
+                            "id": 0,
+                            "code": null,
+                            "label": null
+                        },
+                        "intercommunityVat": null,
+                        "naf": null,
+                        "siren": null,
+                        "vat": null,
+                        "vatOption": null
+                    },
+                    "coPro": false,
+                    "coProCompanyName": null,
+                    "coProContactName": null,
+                    "coProContactEmail": null,
+                    "coProContactPhone": null,
+                    "volumeDivided": false,
+                    "asl": false,
+                    "aful": false,
+                    "servitude": false,
+                    "zac": false,
+                    "igh": false,
+                    "erp": false,
+                    "icpe": false,
+                    "rie": false,
+                    "subdivision": false,
+                    "commercialUrbanism": false,
+                    "expertiseCIBE": false,
+                    "cotationCIBE": 0,
+                    "expertiseCELOG": false,
+                    "cotationCELOG": 0,
+                    "greenCertificationOption": false,
+                    "hqe": false,
+                    "leed": false,
+                    "breeam": false,
+                    "buildingOption": false,
+                    "numberBuilding": 1,
+                    "buildingList": null,
+                    "totalArea": 0,
+                    "publicPageOption": false,
+                    "publicPage": {
+                        "id": 0,
+                        "imagesActive": false,
+                        "buildingAddressActive": false,
+                        "buildingAddress": null,
+                        "googleEarthLinkActive": false,
+                        "googleEarthLink": null,
+                        "geolocActive": false,
+                        "geolocLat": 0,
+                        "geolocLng": 0,
+                        "buildingDescriptionActive": false,
+                        "buildingDescription": null,
+                        "buildingZoneDescriptionActive": false,
+                        "buildingZoneDescription": null,
+                        "publicTransportationAccessActive": false,
+                        "publicTransportationAccess": null,
+                        "amenitiesActive": false,
+                        "amenitiesConference": false,
+                        "amenitiesElectricalPlug": false,
+                        "amenitiesGarden": false,
+                        "amenitiesCorporateRestaurant": false,
+                        "amenitiesCafetaria": false,
+                        "amenitiesBikeRoom": false,
+                        "amenitiesFitnessCenter": false,
+                        "amenitiesRetail": false,
+                        "amenitiesConciergeServices": false,
+                        "amenitiesErp": false,
+                        "lettableAreaActive": false,
+                        "lettableArea": 0,
+                        "lettableAreaDetailsActive": false,
+                        "lettableAreaDetails": null,
+                        "propertyValueActive": false,
+                        "propertyValue": null,
+                        "occupationRateActive": false,
+                        "occupationRate": null,
+                        "occupiedSpacesActive": false,
+                        "occupiedSpaces": null,
+                        "vacantSpacesActive": false,
+                        "vacantSpaces": null,
+                        "averageFloorAreaActive": false,
+                        "averageFloorArea": null,
+                        "numberOfFloorActive": false,
+                        "numberOfFloor": null,
+                        "stackingPlanActive": false,
+                        "stackingPlanTenantActive": false,
+                        "brokerActive": false,
+                        "propertyManagerActive": false,
+                        "assetManagerActive": false,
+                        "websiteActive": false,
+                        "website": null
+                    },
+                    "tempValue": "29600000",
+                    "tempDebt": "8880000",
+                    "tempCapex": "1500000",
+                    "tempCharges": "52",
+                    "tempErv": "200",
+                    "propertyLocales": []
+                }
+            }
+
+## Property Save <Create/Update> [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}?]
+### Property Save <Create/Update> [POST]
+Get detail of Property. Parameter `propertyId` is required on update.
+
++ Request (application/json)
+
+        {
+            "dateStart": "2017-01-01",
+            "dateEnd": "2017-12-31",
+            "leaseEnd": "break-date",
+            "indexation": 1,
+            "inflation": 1
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "kpi": {
+                        "lettableArea": "8000.00",
+                        "value": "29600000",
+                        "occupiedArea": 5400,
+                        "annualIncome": "1141291.00",
+                        "occupationRate": 67.5,
+                        "propertyValue": "29600000",
+                        "numberOfTenant": 3,
+                        "propertyDebt": "8880000",
+                        "averageFaceRentSignature": 209.03740740740741,
+                        "averageFaceRent": 207.36305886549633,
+                        "averageEconomicRentSignature": 0,
+                        "currentCapexProgram": "1500000",
+                        "recoverableChargeTax": "52",
+                        "erv": "200",
+                        "wale": {
+                            "kpi1": 4.156643835616438,
+                            "kpi2": 4.285024517946318,
+                            "kpi3": 6.157990867579908,
+                            "kpi4": 6.237386137187484,
+                            "kpi5": 2.606164383561644,
+                            "kpi6": 2.4681927016681837,
+                            "kpi7": 3.8609842719431757,
+                            "kpi8": 3.5927614595472246,
+                            "kpi1WaltAreaIncludeVacancy": 4.156643835616438,
+                            "kpi2WaltRentIncludeVacancy": 4.285024517946318,
+                            "kpi3WaltAreaExcludeVacancy": 6.157990867579908,
+                            "kpi4WaltRentExcludeVacancy": 6.237386137187484,
+                            "kpi5WalbAreaIncludeVacancy": 2.606164383561644,
+                            "kpi6WalbRentIncludeVacancy": 2.4681927016681837,
+                            "kpi7WalbAreaExcludeVacancy": 3.8609842719431757,
+                            "kpi8WalbRentExcludeVacancy": 3.5927614595472246
+                        }
+                    },
+                    "id": 130,
+                    "name": "Lyon 2",
+                    "crlOption": false,
+                    "code": "Lyon 2",
+                    "address": {
+                        "id": 505,
+                        "address1": "58, Avenue Salvador Allende",
+                        "address2": null,
+                        "zipcode": "69500",
+                        "city": "Bron",
+                        "country": "France",
+                        "lat": 45.7398083,
+                        "lng": 4.9274098
+                    },
+                    "images": [
+                        "uploads/properties/1505814944_74c11df7b2524d27b96c6290d791371b.png"
+                    ],
+                    "unit": "m²",
+                    "currency": {
+                        "id": 1,
+                        "code": "€",
+                        "name": "Euro"
+                    },
+                    "constructionYear": "2017",
+                    "restructurationYear": [],
+                    "typology": {
+                        "id": 2,
+                        "code": "2",
+                        "hasLoyer": true,
+                        "label": "Bureaux"
+                    },
+                    "sdp": 8000,
+                    "numberOfParking": 150,
+                    "measurementUnit": {
+                        "id": 1,
+                        "code": "m²",
+                        "name": "square meter",
+                        "meterConversionRate": 1
+                    },
+                    "company": {
+                        "id": 0,
+                        "address": {
+                            "id": 0,
+                            "address1": null,
+                            "address2": null,
+                            "zipcode": null,
+                            "city": null,
+                            "country": null,
+                            "lat": 0,
+                            "lng": 0
+                        },
+                        "fullName": null,
+                        "tradeName": null,
+                        "raisonSociale": {
+                            "id": 0,
+                            "code": null,
+                            "label": null
+                        },
+                        "intercommunityVat": null,
+                        "naf": null,
+                        "siren": null,
+                        "vat": null,
+                        "vatOption": null
+                    },
+                    "coPro": false,
+                    "coProCompanyName": null,
+                    "coProContactName": null,
+                    "coProContactEmail": null,
+                    "coProContactPhone": null,
+                    "volumeDivided": false,
+                    "asl": false,
+                    "aful": false,
+                    "servitude": false,
+                    "zac": false,
+                    "igh": false,
+                    "erp": false,
+                    "icpe": false,
+                    "rie": false,
+                    "subdivision": false,
+                    "commercialUrbanism": false,
+                    "expertiseCIBE": false,
+                    "cotationCIBE": 0,
+                    "expertiseCELOG": false,
+                    "cotationCELOG": 0,
+                    "greenCertificationOption": false,
+                    "hqe": false,
+                    "leed": false,
+                    "breeam": false,
+                    "buildingOption": false,
+                    "numberBuilding": 1,
+                    "buildingList": null,
+                    "totalArea": 0,
+                    "publicPageOption": false,
+                    "publicPage": {
+                        "id": 0,
+                        "imagesActive": false,
+                        "buildingAddressActive": false,
+                        "buildingAddress": null,
+                        "googleEarthLinkActive": false,
+                        "googleEarthLink": null,
+                        "geolocActive": false,
+                        "geolocLat": 0,
+                        "geolocLng": 0,
+                        "buildingDescriptionActive": false,
+                        "buildingDescription": null,
+                        "buildingZoneDescriptionActive": false,
+                        "buildingZoneDescription": null,
+                        "publicTransportationAccessActive": false,
+                        "publicTransportationAccess": null,
+                        "amenitiesActive": false,
+                        "amenitiesConference": false,
+                        "amenitiesElectricalPlug": false,
+                        "amenitiesGarden": false,
+                        "amenitiesCorporateRestaurant": false,
+                        "amenitiesCafetaria": false,
+                        "amenitiesBikeRoom": false,
+                        "amenitiesFitnessCenter": false,
+                        "amenitiesRetail": false,
+                        "amenitiesConciergeServices": false,
+                        "amenitiesErp": false,
+                        "lettableAreaActive": false,
+                        "lettableArea": 0,
+                        "lettableAreaDetailsActive": false,
+                        "lettableAreaDetails": null,
+                        "propertyValueActive": false,
+                        "propertyValue": null,
+                        "occupationRateActive": false,
+                        "occupationRate": null,
+                        "occupiedSpacesActive": false,
+                        "occupiedSpaces": null,
+                        "vacantSpacesActive": false,
+                        "vacantSpaces": null,
+                        "averageFloorAreaActive": false,
+                        "averageFloorArea": null,
+                        "numberOfFloorActive": false,
+                        "numberOfFloor": null,
+                        "stackingPlanActive": false,
+                        "stackingPlanTenantActive": false,
+                        "brokerActive": false,
+                        "propertyManagerActive": false,
+                        "assetManagerActive": false,
+                        "websiteActive": false,
+                        "website": null
+                    },
+                    "tempValue": "29600000",
+                    "tempDebt": "8880000",
+                    "tempCapex": "1500000",
+                    "tempCharges": "52",
+                    "tempErv": "200",
+                    "propertyLocales": []
+                }
+            }
+
+## Group Property Cashflow
+
+## Property Cashflow Detail [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/cashflow]
+### Property Cashflow Detail [POST]
+Get detail of cashflow.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+        
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                }
+            }
+
+## Group Property Lease
+
+## Property Lease List [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts]
+### Property Lease List [GET]
+Get list of leases.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": [
+                    {
+                        "id": 64,
+                        "status": "VALIDATED",
+                        "rent": 364461.90701981843,
+                        "area": 1400,
+                        "submitUserId": 29,
+                        "validateUserId": 36,
+                        "code": "LOC 3",
+                        "contractType": {
+                            "id": 1,
+                            "code": "commercial",
+                            "label": "Bail commercial"
+                        },
+                        "usagePrincipal": {
+                            "id": 1,
+                            "code": "1",
+                            "label": "Commerces"
+                        },
+                        "tenant": {
+                            "id": 58,
+                            "fullName": "Clemens",
+                            "raisonSociale": {
+                                "id": 2,
+                                "code": "M02",
+                                "label": "S.A."
+                            },
+                            "vatOption": true,
+                            "vat": "FR 45 583 419 834",
+                            "addressOption": true,
+                            "addresses": [
+                                {
+                                    "id": 263,
+                                    "addressType": "headquarter",
+                                    "address": {
+                                        "id": 515,
+                                        "address1": "23 Descente de Bellevue",
+                                        "address2": "",
+                                        "zipcode": "29940",
+                                        "city": "Fouesnant",
+                                        "country": "France",
+                                        "lat": 47.884193,
+                                        "lng": -3.9890793
+                                    }
+                                },
+                                {
+                                    "id": 264,
+                                    "addressType": "billing",
+                                    "address": {
+                                        "id": 516,
+                                        "address1": "",
+                                        "address2": "",
+                                        "zipcode": "",
+                                        "city": "",
+                                        "country": "",
+                                        "lat": 48.6670602,
+                                        "lng": 1.8179955
+                                    }
+                                },
+                                {
+                                    "id": 265,
+                                    "addressType": "headquarter",
+                                    "address": {
+                                        "id": 515,
+                                        "address1": "23 Descente de Bellevue",
+                                        "address2": "",
+                                        "zipcode": "29940",
+                                        "city": "Fouesnant",
+                                        "country": "France",
+                                        "lat": 47.884193,
+                                        "lng": -3.9890793
+                                    }
+                                },
+                                {
+                                    "id": 266,
+                                    "addressType": "billing",
+                                    "address": {
+                                        "id": 516,
+                                        "address1": "",
+                                        "address2": "",
+                                        "zipcode": "",
+                                        "city": "",
+                                        "country": "",
+                                        "lat": 48.6670602,
+                                        "lng": 1.8179955
+                                    }
+                                },
+                                {
+                                    "id": 269,
+                                    "addressType": "headquarter",
+                                    "address": {
+                                        "id": 515,
+                                        "address1": "23 Descente de Bellevue",
+                                        "address2": "",
+                                        "zipcode": "29940",
+                                        "city": "Fouesnant",
+                                        "country": "France",
+                                        "lat": 47.884193,
+                                        "lng": -3.9890793
+                                    }
+                                },
+                                {
+                                    "id": 270,
+                                    "addressType": "billing",
+                                    "address": {
+                                        "id": 516,
+                                        "address1": "",
+                                        "address2": "",
+                                        "zipcode": "",
+                                        "city": "",
+                                        "country": "",
+                                        "lat": 48.6670602,
+                                        "lng": 1.8179955
+                                    }
+                                },
+                                {
+                                    "id": 271,
+                                    "addressType": "headquarter",
+                                    "address": {
+                                        "id": 515,
+                                        "address1": "23 Descente de Bellevue",
+                                        "address2": "",
+                                        "zipcode": "29940",
+                                        "city": "Fouesnant",
+                                        "country": "France",
+                                        "lat": 47.884193,
+                                        "lng": -3.9890793
+                                    }
+                                },
+                                {
+                                    "id": 272,
+                                    "addressType": "billing",
+                                    "address": {
+                                        "id": 516,
+                                        "address1": "",
+                                        "address2": "",
+                                        "zipcode": "",
+                                        "city": "",
+                                        "country": "",
+                                        "lat": 48.6670602,
+                                        "lng": 1.8179955
+                                    }
+                                },
+                                {
+                                    "id": 629,
+                                    "addressType": "headquarter",
+                                    "address": {
+                                        "id": 515,
+                                        "address1": "23 Descente de Bellevue",
+                                        "address2": "",
+                                        "zipcode": "29940",
+                                        "city": "Fouesnant",
+                                        "country": "France",
+                                        "lat": 47.884193,
+                                        "lng": -3.9890793
+                                    }
+                                },
+                                {
+                                    "id": 630,
+                                    "addressType": "billing",
+                                    "address": {
+                                        "id": 516,
+                                        "address1": "",
+                                        "address2": "",
+                                        "zipcode": "",
+                                        "city": "",
+                                        "country": "",
+                                        "lat": 48.6670602,
+                                        "lng": 1.8179955
+                                    }
+                                }
+                            ],
+                            "siren": "",
+                            "bankDetails": "",
+                            "bankAccountName": "",
+                            "iban": "FR76 300 0203 2531 2345 6789 0168 ____ __",
+                            "swift": "",
+                            "contactJobTitle": "Directeur Financier",
+                            "contactCivility": "mrs",
+                            "contactLastName": "Lacroix",
+                            "contactFirstName": "Martine",
+                            "contactEmail": "martine.lacroix@clemens.fr",
+                            "contactOfficePhone": "",
+                            "color": "#a21c7c"
+                        },
+                        "leaseExecutionDate": "1970-11-13",
+                        "leaseStartDate": "1970-01-01",
+                        "leaseAvailabilityOption": false,
+                        "leaseAvailabilityDate": null,
+                        "chargeRecoverableOption": false,
+                        "inventoryFixtureOption": true,
+                        "leaseEndDate": "2024-12-31",
+                        "leaseDuration": 660,
+                        "bailFixedTerms": [
+                            {
+                                "id": 65,
+                                "duration": 36,
+                                "startDate": null,
+                                "endDate": "2019-01-01"
+                            },
+                            {
+                                "id": 66,
+                                "duration": 36,
+                                "startDate": null,
+                                "endDate": "2022-01-01"
+                            },
+                            {
+                                "id": 67,
+                                "duration": 36,
+                                "startDate": null,
+                                "endDate": "2025-01-01"
+                            }
+                        ],
+                        "subleaseOption": false,
+                        "sublease": "",
+                        "leaseTransferOption": false,
+                        "leaseTransfer": "",
+                        "tenantFirstRefusalRightOption": false,
+                        "tenantFirstRefusalRight": "",
+                        "tenantFirstRefusalPreemptiveRightOption": false,
+                        "environmentalAppendixOption": false,
+                        "greenLeaseOption": false,
+                        "icpeOption": false,
+                        "chargeRecoverableComment": null,
+                        "buildings": [
+                            {
+                                "id": 101,
+                                "selectedLots": [
+                                    6612,
+                                    6611,
+                                    6525,
+                                    6526,
+                                    6527,
+                                    6528,
+                                    6529,
+                                    6530,
+                                    6531,
+                                    6532,
+                                    6533,
+                                    6534,
+                                    6535,
+                                    6536,
+                                    6537,
+                                    6538,
+                                    6539,
+                                    6540,
+                                    6541,
+                                    6542,
+                                    6543,
+                                    6544,
+                                    6545,
+                                    6546,
+                                    6547
+                                ],
+                                "unavailableLots": []
+                            }
+                        ],
+                        "loyers": [
+                            {
+                                "id": 1599,
+                                "typology": {
+                                    "id": 20,
+                                    "code": "7",
+                                    "hasLoyer": true,
+                                    "label": "Parkings"
+                                },
+                                "loyerFacialAnnuel": 4600,
+                                "loyerFacialAnnuelM2": 200,
+                                "sdp": 23,
+                                "indexReferenceFirstDate": "2017-01-01",
+                                "indexReference": {
+                                    "id": 6,
+                                    "value": 107.98,
+                                    "nature": "ILAT",
+                                    "periode": "2015-07-01"
+                                },
+                                "freeRent": null,
+                                "plafon": null,
+                                "plafonOption": false,
+                                "level": null,
+                                "tenantIncentive": null
+                            },
+                            {
+                                "id": 1598,
+                                "typology": {
+                                    "id": 2,
+                                    "code": "2",
+                                    "hasLoyer": true,
+                                    "label": "Bureaux"
+                                },
+                                "loyerFacialAnnuel": 352002,
+                                "loyerFacialAnnuelM2": 251.43,
+                                "sdp": 1400,
+                                "indexReferenceFirstDate": "2017-01-01",
+                                "indexReference": {
+                                    "id": 6,
+                                    "value": 107.98,
+                                    "nature": "ILAT",
+                                    "periode": "2015-07-01"
+                                },
+                                "freeRent": null,
+                                "plafon": null,
+                                "plafonOption": false,
+                                "level": null,
+                                "tenantIncentive": null
+                            }
+                        ],
+                        "invoicingPeriod": 1,
+                        "invoicingInterval": "quarter",
+                        "paidInAdvance": true,
+                        "bailDepositOption": true,
+                        "bailDeposit": {
+                            "id": 58,
+                            "month": 3,
+                            "ttc": true,
+                            "amount": "106980"
+                        },
+                        "bailCaution": null,
+                        "bailCharge": {
+                            "id": 58,
+                            "landTaxOption": true,
+                            "garbageTaxOption": true,
+                            "officeTaxOption": true,
+                            "additionalTaxOption": true,
+                            "cvaeOption": true,
+                            "civilCode605Option": true,
+                            "civilCode606Option": false,
+                            "buildingInsuranceOption": true,
+                            "administrativeFeeOption": false,
+                            "technicalFeeOption": true,
+                            "defaultInterestOption": false,
+                            "defaultInterestComment": "",
+                            "myreOption": true,
+                            "tlpeOption": false,
+                            "otherRecoverableChargeOption": false,
+                            "otherRecoverableChargeComment": null,
+                            "fgrmOption": false
+                        },
+                        "noticePeriodDuration": 6,
+                        "terminationNoticeDate": null,
+                        "terminationReason": "",
+                        "terminationPenaltyFeeOption": false,
+                        "terminationPenaltyFeeAmount": 0,
+                        "terminationPenaltyFeeComment": "",
+                        "tenantMoveOutDate": null,
+                        "departureInventoryOption": true,
+                        "refurbishmentOption": false,
+                        "refurbishmentAmount": 0,
+                        "rentalDeductionOption": false,
+                        "rentalDeductionAmount": 0,
+                        "disputeOption": false,
+                        "disputeComment": "",
+                        "cancelationClauseOption": false,
+                        "additionalComment": ""
+                    }
+                ]
+            }
+
+## Property Lease Detail [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts/{contractId}]
+### Property Lease Detail [GET]
+Get detail of leases.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 64,
+                    "status": "VALIDATED",
+                    "rent": 364461.90701981843,
+                    "area": 1400,
+                    "submitUserId": 29,
+                    "validateUserId": 36,
+                    "code": "LOC 3",
+                    "contractType": {
+                        "id": 1,
+                        "code": "commercial",
+                        "label": "Bail commercial"
+                    },
+                    "usagePrincipal": {
+                        "id": 1,
+                        "code": "1",
+                        "label": "Commerces"
+                    },
+                    "tenant": {
+                        "id": 58,
+                        "fullName": "Clemens",
+                        "raisonSociale": {
+                            "id": 2,
+                            "code": "M02",
+                            "label": "S.A."
+                        },
+                        "vatOption": true,
+                        "vat": "FR 45 583 419 834",
+                        "addressOption": true,
+                        "addresses": [
+                            {
+                                "id": 263,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 264,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 265,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 266,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 269,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 270,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 271,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 272,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 629,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 630,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            }
+                        ],
+                        "siren": "",
+                        "bankDetails": "",
+                        "bankAccountName": "",
+                        "iban": "FR76 300 0203 2531 2345 6789 0168 ____ __",
+                        "swift": "",
+                        "contactJobTitle": "Directeur Financier",
+                        "contactCivility": "mrs",
+                        "contactLastName": "Lacroix",
+                        "contactFirstName": "Martine",
+                        "contactEmail": "martine.lacroix@clemens.fr",
+                        "contactOfficePhone": "",
+                        "color": "#a21c7c"
+                    },
+                    "leaseExecutionDate": "1970-11-13",
+                    "leaseStartDate": "1970-01-01",
+                    "leaseAvailabilityOption": false,
+                    "leaseAvailabilityDate": null,
+                    "chargeRecoverableOption": false,
+                    "inventoryFixtureOption": true,
+                    "leaseEndDate": "2024-12-31",
+                    "leaseDuration": 660,
+                    "bailFixedTerms": [
+                        {
+                            "id": 65,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2019-01-01"
+                        },
+                        {
+                            "id": 66,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2022-01-01"
+                        },
+                        {
+                            "id": 67,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2025-01-01"
+                        }
+                    ],
+                    "subleaseOption": false,
+                    "sublease": "",
+                    "leaseTransferOption": false,
+                    "leaseTransfer": "",
+                    "tenantFirstRefusalRightOption": false,
+                    "tenantFirstRefusalRight": "",
+                    "tenantFirstRefusalPreemptiveRightOption": false,
+                    "environmentalAppendixOption": false,
+                    "greenLeaseOption": false,
+                    "icpeOption": false,
+                    "chargeRecoverableComment": null,
+                    "buildings": [
+                        {
+                            "id": 101,
+                            "selectedLots": [
+                                6612,
+                                6611,
+                                6525,
+                                6526,
+                                6527,
+                                6528,
+                                6529,
+                                6530,
+                                6531,
+                                6532,
+                                6533,
+                                6534,
+                                6535,
+                                6536,
+                                6537,
+                                6538,
+                                6539,
+                                6540,
+                                6541,
+                                6542,
+                                6543,
+                                6544,
+                                6545,
+                                6546,
+                                6547
+                            ],
+                            "unavailableLots": []
+                        }
+                    ],
+                    "loyers": [
+                        {
+                            "id": 1599,
+                            "typology": {
+                                "id": 20,
+                                "code": "7",
+                                "hasLoyer": true,
+                                "label": "Parkings"
+                            },
+                            "loyerFacialAnnuel": 4600,
+                            "loyerFacialAnnuelM2": 200,
+                            "sdp": 23,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        },
+                        {
+                            "id": 1598,
+                            "typology": {
+                                "id": 2,
+                                "code": "2",
+                                "hasLoyer": true,
+                                "label": "Bureaux"
+                            },
+                            "loyerFacialAnnuel": 352002,
+                            "loyerFacialAnnuelM2": 251.43,
+                            "sdp": 1400,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        }
+                    ],
+                    "invoicingPeriod": 1,
+                    "invoicingInterval": "quarter",
+                    "paidInAdvance": true,
+                    "bailDepositOption": true,
+                    "bailDeposit": {
+                        "id": 58,
+                        "month": 3,
+                        "ttc": true,
+                        "amount": "106980"
+                    },
+                    "bailCaution": null,
+                    "bailCharge": {
+                        "id": 58,
+                        "landTaxOption": true,
+                        "garbageTaxOption": true,
+                        "officeTaxOption": true,
+                        "additionalTaxOption": true,
+                        "cvaeOption": true,
+                        "civilCode605Option": true,
+                        "civilCode606Option": false,
+                        "buildingInsuranceOption": true,
+                        "administrativeFeeOption": false,
+                        "technicalFeeOption": true,
+                        "defaultInterestOption": false,
+                        "defaultInterestComment": "",
+                        "myreOption": true,
+                        "tlpeOption": false,
+                        "otherRecoverableChargeOption": false,
+                        "otherRecoverableChargeComment": null,
+                        "fgrmOption": false
+                    },
+                    "noticePeriodDuration": 6,
+                    "terminationNoticeDate": null,
+                    "terminationReason": "",
+                    "terminationPenaltyFeeOption": false,
+                    "terminationPenaltyFeeAmount": 0,
+                    "terminationPenaltyFeeComment": "",
+                    "tenantMoveOutDate": null,
+                    "departureInventoryOption": true,
+                    "refurbishmentOption": false,
+                    "refurbishmentAmount": 0,
+                    "rentalDeductionOption": false,
+                    "rentalDeductionAmount": 0,
+                    "disputeOption": false,
+                    "disputeComment": "",
+                    "cancelationClauseOption": false,
+                    "additionalComment": ""
+                }
+            }
+
+## Property Lease Save <Create/Update> [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts/{contractId}?]
+### Property Lease Save <Create/Update> [POST]
+Get list of leases. Parameter `contractId` is required on update.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 64,
+                    "status": "CREATED",
+                    "rent": 364461.90701981843,
+                    "area": 1400,
+                    "submitUserId": 29,
+                    "validateUserId": 36,
+                    "code": "LOC 3",
+                    "contractType": {
+                        "id": 1,
+                        "code": "commercial",
+                        "label": "Bail commercial"
+                    },
+                    "usagePrincipal": {
+                        "id": 1,
+                        "code": "1",
+                        "label": "Commerces"
+                    },
+                    "tenant": {
+                        "id": 58,
+                        "fullName": "Clemens",
+                        "raisonSociale": {
+                            "id": 2,
+                            "code": "M02",
+                            "label": "S.A."
+                        },
+                        "vatOption": true,
+                        "vat": "FR 45 583 419 834",
+                        "addressOption": true,
+                        "addresses": [
+                            {
+                                "id": 263,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 264,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 265,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 266,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 269,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 270,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 271,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 272,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 629,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 630,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            }
+                        ],
+                        "siren": "",
+                        "bankDetails": "",
+                        "bankAccountName": "",
+                        "iban": "FR76 300 0203 2531 2345 6789 0168 ____ __",
+                        "swift": "",
+                        "contactJobTitle": "Directeur Financier",
+                        "contactCivility": "mrs",
+                        "contactLastName": "Lacroix",
+                        "contactFirstName": "Martine",
+                        "contactEmail": "martine.lacroix@clemens.fr",
+                        "contactOfficePhone": "",
+                        "color": "#a21c7c"
+                    },
+                    "leaseExecutionDate": "1970-11-13",
+                    "leaseStartDate": "1970-01-01",
+                    "leaseAvailabilityOption": false,
+                    "leaseAvailabilityDate": null,
+                    "chargeRecoverableOption": false,
+                    "inventoryFixtureOption": true,
+                    "leaseEndDate": "2024-12-31",
+                    "leaseDuration": 660,
+                    "bailFixedTerms": [
+                        {
+                            "id": 65,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2019-01-01"
+                        },
+                        {
+                            "id": 66,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2022-01-01"
+                        },
+                        {
+                            "id": 67,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2025-01-01"
+                        }
+                    ],
+                    "subleaseOption": false,
+                    "sublease": "",
+                    "leaseTransferOption": false,
+                    "leaseTransfer": "",
+                    "tenantFirstRefusalRightOption": false,
+                    "tenantFirstRefusalRight": "",
+                    "tenantFirstRefusalPreemptiveRightOption": false,
+                    "environmentalAppendixOption": false,
+                    "greenLeaseOption": false,
+                    "icpeOption": false,
+                    "chargeRecoverableComment": null,
+                    "buildings": [
+                        {
+                            "id": 101,
+                            "selectedLots": [
+                                6612,
+                                6611,
+                                6525,
+                                6526,
+                                6527,
+                                6528,
+                                6529,
+                                6530,
+                                6531,
+                                6532,
+                                6533,
+                                6534,
+                                6535,
+                                6536,
+                                6537,
+                                6538,
+                                6539,
+                                6540,
+                                6541,
+                                6542,
+                                6543,
+                                6544,
+                                6545,
+                                6546,
+                                6547
+                            ],
+                            "unavailableLots": []
+                        }
+                    ],
+                    "loyers": [
+                        {
+                            "id": 1599,
+                            "typology": {
+                                "id": 20,
+                                "code": "7",
+                                "hasLoyer": true,
+                                "label": "Parkings"
+                            },
+                            "loyerFacialAnnuel": 4600,
+                            "loyerFacialAnnuelM2": 200,
+                            "sdp": 23,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        },
+                        {
+                            "id": 1598,
+                            "typology": {
+                                "id": 2,
+                                "code": "2",
+                                "hasLoyer": true,
+                                "label": "Bureaux"
+                            },
+                            "loyerFacialAnnuel": 352002,
+                            "loyerFacialAnnuelM2": 251.43,
+                            "sdp": 1400,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        }
+                    ],
+                    "invoicingPeriod": 1,
+                    "invoicingInterval": "quarter",
+                    "paidInAdvance": true,
+                    "bailDepositOption": true,
+                    "bailDeposit": {
+                        "id": 58,
+                        "month": 3,
+                        "ttc": true,
+                        "amount": "106980"
+                    },
+                    "bailCaution": null,
+                    "bailCharge": {
+                        "id": 58,
+                        "landTaxOption": true,
+                        "garbageTaxOption": true,
+                        "officeTaxOption": true,
+                        "additionalTaxOption": true,
+                        "cvaeOption": true,
+                        "civilCode605Option": true,
+                        "civilCode606Option": false,
+                        "buildingInsuranceOption": true,
+                        "administrativeFeeOption": false,
+                        "technicalFeeOption": true,
+                        "defaultInterestOption": false,
+                        "defaultInterestComment": "",
+                        "myreOption": true,
+                        "tlpeOption": false,
+                        "otherRecoverableChargeOption": false,
+                        "otherRecoverableChargeComment": null,
+                        "fgrmOption": false
+                    },
+                    "noticePeriodDuration": 6,
+                    "terminationNoticeDate": null,
+                    "terminationReason": "",
+                    "terminationPenaltyFeeOption": false,
+                    "terminationPenaltyFeeAmount": 0,
+                    "terminationPenaltyFeeComment": "",
+                    "tenantMoveOutDate": null,
+                    "departureInventoryOption": true,
+                    "refurbishmentOption": false,
+                    "refurbishmentAmount": 0,
+                    "rentalDeductionOption": false,
+                    "rentalDeductionAmount": 0,
+                    "disputeOption": false,
+                    "disputeComment": "",
+                    "cancelationClauseOption": false,
+                    "additionalComment": ""
+                }
+            }
+
+## Property Lease Submit [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts/{contractId}/submit]
+### Property Lease Submit [POST]
+Submit a Lease.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 64,
+                    "status": "SUBMITTED",
+                    "rent": 364461.90701981843,
+                    "area": 1400,
+                    "submitUserId": 29,
+                    "validateUserId": 36,
+                    "code": "LOC 3",
+                    "contractType": {
+                        "id": 1,
+                        "code": "commercial",
+                        "label": "Bail commercial"
+                    },
+                    "usagePrincipal": {
+                        "id": 1,
+                        "code": "1",
+                        "label": "Commerces"
+                    },
+                    "tenant": {
+                        "id": 58,
+                        "fullName": "Clemens",
+                        "raisonSociale": {
+                            "id": 2,
+                            "code": "M02",
+                            "label": "S.A."
+                        },
+                        "vatOption": true,
+                        "vat": "FR 45 583 419 834",
+                        "addressOption": true,
+                        "addresses": [
+                            {
+                                "id": 263,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 264,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 265,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 266,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 269,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 270,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 271,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 272,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 629,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 630,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            }
+                        ],
+                        "siren": "",
+                        "bankDetails": "",
+                        "bankAccountName": "",
+                        "iban": "FR76 300 0203 2531 2345 6789 0168 ____ __",
+                        "swift": "",
+                        "contactJobTitle": "Directeur Financier",
+                        "contactCivility": "mrs",
+                        "contactLastName": "Lacroix",
+                        "contactFirstName": "Martine",
+                        "contactEmail": "martine.lacroix@clemens.fr",
+                        "contactOfficePhone": "",
+                        "color": "#a21c7c"
+                    },
+                    "leaseExecutionDate": "1970-11-13",
+                    "leaseStartDate": "1970-01-01",
+                    "leaseAvailabilityOption": false,
+                    "leaseAvailabilityDate": null,
+                    "chargeRecoverableOption": false,
+                    "inventoryFixtureOption": true,
+                    "leaseEndDate": "2024-12-31",
+                    "leaseDuration": 660,
+                    "bailFixedTerms": [
+                        {
+                            "id": 65,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2019-01-01"
+                        },
+                        {
+                            "id": 66,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2022-01-01"
+                        },
+                        {
+                            "id": 67,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2025-01-01"
+                        }
+                    ],
+                    "subleaseOption": false,
+                    "sublease": "",
+                    "leaseTransferOption": false,
+                    "leaseTransfer": "",
+                    "tenantFirstRefusalRightOption": false,
+                    "tenantFirstRefusalRight": "",
+                    "tenantFirstRefusalPreemptiveRightOption": false,
+                    "environmentalAppendixOption": false,
+                    "greenLeaseOption": false,
+                    "icpeOption": false,
+                    "chargeRecoverableComment": null,
+                    "buildings": [
+                        {
+                            "id": 101,
+                            "selectedLots": [
+                                6612,
+                                6611,
+                                6525,
+                                6526,
+                                6527,
+                                6528,
+                                6529,
+                                6530,
+                                6531,
+                                6532,
+                                6533,
+                                6534,
+                                6535,
+                                6536,
+                                6537,
+                                6538,
+                                6539,
+                                6540,
+                                6541,
+                                6542,
+                                6543,
+                                6544,
+                                6545,
+                                6546,
+                                6547
+                            ],
+                            "unavailableLots": []
+                        }
+                    ],
+                    "loyers": [
+                        {
+                            "id": 1599,
+                            "typology": {
+                                "id": 20,
+                                "code": "7",
+                                "hasLoyer": true,
+                                "label": "Parkings"
+                            },
+                            "loyerFacialAnnuel": 4600,
+                            "loyerFacialAnnuelM2": 200,
+                            "sdp": 23,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        },
+                        {
+                            "id": 1598,
+                            "typology": {
+                                "id": 2,
+                                "code": "2",
+                                "hasLoyer": true,
+                                "label": "Bureaux"
+                            },
+                            "loyerFacialAnnuel": 352002,
+                            "loyerFacialAnnuelM2": 251.43,
+                            "sdp": 1400,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        }
+                    ],
+                    "invoicingPeriod": 1,
+                    "invoicingInterval": "quarter",
+                    "paidInAdvance": true,
+                    "bailDepositOption": true,
+                    "bailDeposit": {
+                        "id": 58,
+                        "month": 3,
+                        "ttc": true,
+                        "amount": "106980"
+                    },
+                    "bailCaution": null,
+                    "bailCharge": {
+                        "id": 58,
+                        "landTaxOption": true,
+                        "garbageTaxOption": true,
+                        "officeTaxOption": true,
+                        "additionalTaxOption": true,
+                        "cvaeOption": true,
+                        "civilCode605Option": true,
+                        "civilCode606Option": false,
+                        "buildingInsuranceOption": true,
+                        "administrativeFeeOption": false,
+                        "technicalFeeOption": true,
+                        "defaultInterestOption": false,
+                        "defaultInterestComment": "",
+                        "myreOption": true,
+                        "tlpeOption": false,
+                        "otherRecoverableChargeOption": false,
+                        "otherRecoverableChargeComment": null,
+                        "fgrmOption": false
+                    },
+                    "noticePeriodDuration": 6,
+                    "terminationNoticeDate": null,
+                    "terminationReason": "",
+                    "terminationPenaltyFeeOption": false,
+                    "terminationPenaltyFeeAmount": 0,
+                    "terminationPenaltyFeeComment": "",
+                    "tenantMoveOutDate": null,
+                    "departureInventoryOption": true,
+                    "refurbishmentOption": false,
+                    "refurbishmentAmount": 0,
+                    "rentalDeductionOption": false,
+                    "rentalDeductionAmount": 0,
+                    "disputeOption": false,
+                    "disputeComment": "",
+                    "cancelationClauseOption": false,
+                    "additionalComment": ""
+                }
+            }
+
+## Property Lease Validate [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts/{contractId}/validate]
+### Property Lease Validate [POST]
+Validate a Lease.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 64,
+                    "status": "VALIDATED",
+                    "rent": 364461.90701981843,
+                    "area": 1400,
+                    "submitUserId": 29,
+                    "validateUserId": 36,
+                    "code": "LOC 3",
+                    "contractType": {
+                        "id": 1,
+                        "code": "commercial",
+                        "label": "Bail commercial"
+                    },
+                    "usagePrincipal": {
+                        "id": 1,
+                        "code": "1",
+                        "label": "Commerces"
+                    },
+                    "tenant": {
+                        "id": 58,
+                        "fullName": "Clemens",
+                        "raisonSociale": {
+                            "id": 2,
+                            "code": "M02",
+                            "label": "S.A."
+                        },
+                        "vatOption": true,
+                        "vat": "FR 45 583 419 834",
+                        "addressOption": true,
+                        "addresses": [
+                            {
+                                "id": 263,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 264,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 265,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 266,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 269,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 270,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 271,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 272,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            },
+                            {
+                                "id": 629,
+                                "addressType": "headquarter",
+                                "address": {
+                                    "id": 515,
+                                    "address1": "23 Descente de Bellevue",
+                                    "address2": "",
+                                    "zipcode": "29940",
+                                    "city": "Fouesnant",
+                                    "country": "France",
+                                    "lat": 47.884193,
+                                    "lng": -3.9890793
+                                }
+                            },
+                            {
+                                "id": 630,
+                                "addressType": "billing",
+                                "address": {
+                                    "id": 516,
+                                    "address1": "",
+                                    "address2": "",
+                                    "zipcode": "",
+                                    "city": "",
+                                    "country": "",
+                                    "lat": 48.6670602,
+                                    "lng": 1.8179955
+                                }
+                            }
+                        ],
+                        "siren": "",
+                        "bankDetails": "",
+                        "bankAccountName": "",
+                        "iban": "FR76 300 0203 2531 2345 6789 0168 ____ __",
+                        "swift": "",
+                        "contactJobTitle": "Directeur Financier",
+                        "contactCivility": "mrs",
+                        "contactLastName": "Lacroix",
+                        "contactFirstName": "Martine",
+                        "contactEmail": "martine.lacroix@clemens.fr",
+                        "contactOfficePhone": "",
+                        "color": "#a21c7c"
+                    },
+                    "leaseExecutionDate": "1970-11-13",
+                    "leaseStartDate": "1970-01-01",
+                    "leaseAvailabilityOption": false,
+                    "leaseAvailabilityDate": null,
+                    "chargeRecoverableOption": false,
+                    "inventoryFixtureOption": true,
+                    "leaseEndDate": "2024-12-31",
+                    "leaseDuration": 660,
+                    "bailFixedTerms": [
+                        {
+                            "id": 65,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2019-01-01"
+                        },
+                        {
+                            "id": 66,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2022-01-01"
+                        },
+                        {
+                            "id": 67,
+                            "duration": 36,
+                            "startDate": null,
+                            "endDate": "2025-01-01"
+                        }
+                    ],
+                    "subleaseOption": false,
+                    "sublease": "",
+                    "leaseTransferOption": false,
+                    "leaseTransfer": "",
+                    "tenantFirstRefusalRightOption": false,
+                    "tenantFirstRefusalRight": "",
+                    "tenantFirstRefusalPreemptiveRightOption": false,
+                    "environmentalAppendixOption": false,
+                    "greenLeaseOption": false,
+                    "icpeOption": false,
+                    "chargeRecoverableComment": null,
+                    "buildings": [
+                        {
+                            "id": 101,
+                            "selectedLots": [
+                                6612,
+                                6611,
+                                6525,
+                                6526,
+                                6527,
+                                6528,
+                                6529,
+                                6530,
+                                6531,
+                                6532,
+                                6533,
+                                6534,
+                                6535,
+                                6536,
+                                6537,
+                                6538,
+                                6539,
+                                6540,
+                                6541,
+                                6542,
+                                6543,
+                                6544,
+                                6545,
+                                6546,
+                                6547
+                            ],
+                            "unavailableLots": []
+                        }
+                    ],
+                    "loyers": [
+                        {
+                            "id": 1599,
+                            "typology": {
+                                "id": 20,
+                                "code": "7",
+                                "hasLoyer": true,
+                                "label": "Parkings"
+                            },
+                            "loyerFacialAnnuel": 4600,
+                            "loyerFacialAnnuelM2": 200,
+                            "sdp": 23,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        },
+                        {
+                            "id": 1598,
+                            "typology": {
+                                "id": 2,
+                                "code": "2",
+                                "hasLoyer": true,
+                                "label": "Bureaux"
+                            },
+                            "loyerFacialAnnuel": 352002,
+                            "loyerFacialAnnuelM2": 251.43,
+                            "sdp": 1400,
+                            "indexReferenceFirstDate": "2017-01-01",
+                            "indexReference": {
+                                "id": 6,
+                                "value": 107.98,
+                                "nature": "ILAT",
+                                "periode": "2015-07-01"
+                            },
+                            "freeRent": null,
+                            "plafon": null,
+                            "plafonOption": false,
+                            "level": null,
+                            "tenantIncentive": null
+                        }
+                    ],
+                    "invoicingPeriod": 1,
+                    "invoicingInterval": "quarter",
+                    "paidInAdvance": true,
+                    "bailDepositOption": true,
+                    "bailDeposit": {
+                        "id": 58,
+                        "month": 3,
+                        "ttc": true,
+                        "amount": "106980"
+                    },
+                    "bailCaution": null,
+                    "bailCharge": {
+                        "id": 58,
+                        "landTaxOption": true,
+                        "garbageTaxOption": true,
+                        "officeTaxOption": true,
+                        "additionalTaxOption": true,
+                        "cvaeOption": true,
+                        "civilCode605Option": true,
+                        "civilCode606Option": false,
+                        "buildingInsuranceOption": true,
+                        "administrativeFeeOption": false,
+                        "technicalFeeOption": true,
+                        "defaultInterestOption": false,
+                        "defaultInterestComment": "",
+                        "myreOption": true,
+                        "tlpeOption": false,
+                        "otherRecoverableChargeOption": false,
+                        "otherRecoverableChargeComment": null,
+                        "fgrmOption": false
+                    },
+                    "noticePeriodDuration": 6,
+                    "terminationNoticeDate": null,
+                    "terminationReason": "",
+                    "terminationPenaltyFeeOption": false,
+                    "terminationPenaltyFeeAmount": 0,
+                    "terminationPenaltyFeeComment": "",
+                    "tenantMoveOutDate": null,
+                    "departureInventoryOption": true,
+                    "refurbishmentOption": false,
+                    "refurbishmentAmount": 0,
+                    "rentalDeductionOption": false,
+                    "rentalDeductionAmount": 0,
+                    "disputeOption": false,
+                    "disputeComment": "",
+                    "cancelationClauseOption": false,
+                    "additionalComment": ""
+                }
+            }
+
+## Group Property Widgets
+## Property Stacking Plan [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/stacking-plan?lot_countable=1]
+### Property Stacking Plan [GET]
+Stacking plan. `lot_countable=1` will only select lot that is rent countable.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "buildings": [
+                        {
+                            "id": 101,
+                            "name": "Lyon 2",
+                            "floor": 9,
+                            "parkingFloor": 2
+                        }
+                    ],
+                    "contracts": [
+                        {
+                            "id": 62,
+                            "color": "#f9698f",
+                            "endDate": "2023-08-09",
+                            "baseRent": 569200,
+                            "breakDate": "2023-08-09",
+                            "rentedArea": 3000,
+                            "currentRent": "186.87",
+                            "loyers": [
+                                {
+                                    "id": 1065,
+                                    "bail_id": 62,
+                                    "loyer_facial_annuel": "180000",
+                                    "loyer_facial_annuel_m2": "180",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2017-12-07 12:36:23",
+                                    "update_date": "2017-12-07 12:36:24",
+                                    "delete_date": null,
+                                    "typology_id": 1,
+                                    "sdp": "1000",
+                                    "index_reference_id": null,
+                                    "index_reference_first_date": null,
+                                    "plafon_option": null,
+                                    "index_reference": null
+                                },
+                                {
+                                    "id": 1066,
+                                    "bail_id": 62,
+                                    "loyer_facial_annuel": "380000",
+                                    "loyer_facial_annuel_m2": "190",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2017-12-07 12:36:24",
+                                    "update_date": "2017-12-07 12:36:24",
+                                    "delete_date": null,
+                                    "typology_id": 2,
+                                    "sdp": "2000",
+                                    "index_reference_id": null,
+                                    "index_reference_first_date": null,
+                                    "plafon_option": null,
+                                    "index_reference": null
+                                },
+                                {
+                                    "id": 1067,
+                                    "bail_id": 62,
+                                    "loyer_facial_annuel": "9200",
+                                    "loyer_facial_annuel_m2": "200",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2017-12-07 12:36:24",
+                                    "update_date": "2017-12-07 12:36:24",
+                                    "delete_date": null,
+                                    "typology_id": 20,
+                                    "sdp": "46",
+                                    "index_reference_id": null,
+                                    "index_reference_first_date": null,
+                                    "plafon_option": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": 64,
+                            "color": "#a21c7c",
+                            "endDate": "2024-12-31",
+                            "baseRent": 356602,
+                            "breakDate": "2019-01-01",
+                            "rentedArea": 1400,
+                            "currentRent": "250.60",
+                            "loyers": [
+                                {
+                                    "id": 1599,
+                                    "bail_id": 64,
+                                    "loyer_facial_annuel": "4600",
+                                    "loyer_facial_annuel_m2": "200",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2018-01-25 10:17:07",
+                                    "update_date": "2018-01-25 10:17:07",
+                                    "delete_date": null,
+                                    "typology_id": 20,
+                                    "sdp": "23",
+                                    "index_reference_id": 6,
+                                    "index_reference_first_date": "2017-01-01",
+                                    "plafon_option": null
+                                },
+                                {
+                                    "id": 1598,
+                                    "bail_id": 64,
+                                    "loyer_facial_annuel": "352002",
+                                    "loyer_facial_annuel_m2": "251.43",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2018-01-25 10:17:07",
+                                    "update_date": "2018-01-25 10:17:07",
+                                    "delete_date": null,
+                                    "typology_id": 2,
+                                    "sdp": "1400",
+                                    "index_reference_id": 6,
+                                    "index_reference_first_date": "2017-01-01",
+                                    "plafon_option": null,
+                                    "index_reference": {
+                                        "id": 6,
+                                        "value": "107.98",
+                                        "nature": "ILAT",
+                                        "periode": "2015-07-01",
+                                        "creation_date": null,
+                                        "update_date": "2017-11-16 11:29:42",
+                                        "delete_date": null,
+                                        "is_published": true,
+                                        "yearly_change_percentage": "0.33451031406802",
+                                        "publish_date": null
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": 60,
+                            "color": "#edb6f0",
+                            "endDate": "2024-12-31",
+                            "baseRent": 203000,
+                            "breakDate": "2021-01-01",
+                            "rentedArea": 1000,
+                            "currentRent": "198.24",
+                            "loyers": [
+                                {
+                                    "id": 101,
+                                    "bail_id": 60,
+                                    "loyer_facial_annuel": "200000",
+                                    "loyer_facial_annuel_m2": "200",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2017-09-19 10:14:52",
+                                    "update_date": "2017-09-19 10:14:52",
+                                    "delete_date": null,
+                                    "typology_id": 2,
+                                    "sdp": "1000",
+                                    "index_reference_id": null,
+                                    "index_reference_first_date": null,
+                                    "plafon_option": null,
+                                    "index_reference": null
+                                },
+                                {
+                                    "id": 102,
+                                    "bail_id": 60,
+                                    "loyer_facial_annuel": "3000",
+                                    "loyer_facial_annuel_m2": "125",
+                                    "loyer_facial_parking": null,
+                                    "loyer_facial_parking_per_unit": null,
+                                    "loyer_facial_rie": null,
+                                    "loyer_facial_rie_per_unit": null,
+                                    "creation_date": "2017-09-19 10:14:52",
+                                    "update_date": "2017-09-19 10:14:52",
+                                    "delete_date": null,
+                                    "typology_id": 20,
+                                    "sdp": "24",
+                                    "index_reference_id": null,
+                                    "index_reference_first_date": null,
+                                    "plafon_option": null
+                                }
+                            ]
+                        }
+                    ],
+                    "lots": [
+                        {
+                            "id": 6605,
+                            "buildingId": 101,
+                            "typologyId": 1,
+                            "sdp": 1000,
+                            "floor": 0,
+                            "contractId": 62,
+                            "currentRent": 180,
+                            "tenantId": 56
+                        },
+                        {
+                            "id": 6606,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 1000,
+                            "floor": 1,
+                            "contractId": 62,
+                            "currentRent": 190,
+                            "tenantId": 56
+                        },
+                        {
+                            "id": 6607,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 1000,
+                            "floor": 2,
+                            "contractId": 62,
+                            "currentRent": 190,
+                            "tenantId": 56
+                        },
+                        {
+                            "id": 6608,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 1000,
+                            "floor": 3,
+                            "contractId": null,
+                            "currentRent": 0,
+                            "tenantId": null
+                        },
+                        {
+                            "id": 6609,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 800,
+                            "floor": 4,
+                            "contractId": null,
+                            "currentRent": 0,
+                            "tenantId": null
+                        },
+                        {
+                            "id": 6610,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 800,
+                            "floor": 5,
+                            "contractId": null,
+                            "currentRent": 0,
+                            "tenantId": null
+                        },
+                        {
+                            "id": 6611,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 800,
+                            "floor": 6,
+                            "contractId": 64,
+                            "currentRent": 256.9717984812002,
+                            "tenantId": 58
+                        },
+                        {
+                            "id": 6612,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 600,
+                            "floor": 7,
+                            "contractId": 64,
+                            "currentRent": 256.9717984812002,
+                            "tenantId": 58
+                        },
+                        {
+                            "id": 6613,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 500,
+                            "floor": 8,
+                            "contractId": 60,
+                            "currentRent": 200,
+                            "tenantId": 54
+                        },
+                        {
+                            "id": 6614,
+                            "buildingId": 101,
+                            "typologyId": 2,
+                            "sdp": 500,
+                            "floor": 9,
+                            "contractId": 60,
+                            "currentRent": 200,
+                            "tenantId": 54
+                        }
+                    ],
+                    "lotDetails": {
+                        "numberOfAntenna": 0,
+                        "numberOfParking": 150
+                    },
+                    "tenants": [
+                        {
+                            "id": 56,
+                            "name": "LaBoutik"
+                        },
+                        {
+                            "id": 58,
+                            "name": "Clemens"
+                        },
+                        {
+                            "id": 54,
+                            "name": "LabEco"
+                        }
+                    ],
+                    "typologies": [
+                        {
+                            "id": 1,
+                            "code": "1",
+                            "label": "Commerces"
+                        },
+                        {
+                            "id": 2,
+                            "code": "2",
+                            "label": "Bureaux"
+                        }
+                    ]
+                }
+            }
+
+## Property Tenancy Schedule [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/tenancy-schedule]
+### Property Tenancy Schedule [GET]
+Tenancy Schedule.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                }
+            }
+
+## Property Widget Next Break [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/widget-next-break]
+### Property Widget Next Break [GET]
+Widget of Next Break.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": [
+                    {
+                        "tenantName": "Clemens",
+                        "type": "break",
+                        "noticeDate": "2018-07-01",
+                        "breakDate": "2019-01-01"
+                    },
+                    {
+                        "tenantName": "LabEco",
+                        "type": "break",
+                        "noticeDate": "2020-07-01",
+                        "breakDate": "2021-01-01"
+                    },
+                    {
+                        "tenantName": "LaBoutik",
+                        "type": "terminate",
+                        "noticeDate": "2023-02-09",
+                        "breakDate": "2023-08-09"
+                    }
+                ]
+            }
+
+## Property Widget Tenancy Schedule [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/widget-tenancy-schedule]
+### Property Widget Tenancy Schedule [GET]
+Widget of Tenancy Schedule.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": [
+                    {
+                        "tenancyScheduleId": 0,
+                        "typology": "2",
+                        "totalArea": 7000,
+                        "occupiedArea": 4400,
+                        "occupationRate": 62.857142857142854,
+                        "totalIncome": 939760.5178736803
+                    },
+                    {
+                        "tenancyScheduleId": 1,
+                        "typology": "1",
+                        "totalArea": 1000,
+                        "occupiedArea": 1000,
+                        "occupationRate": 100,
+                        "totalIncome": 180000
+                    },
+                    {
+                        "tenancyScheduleId": 70,
+                        "typology": "7",
+                        "totalArea": 150,
+                        "occupiedArea": 93,
+                        "occupationRate": 62,
+                        "totalIncome": 16901.38914613818
+                    }
+                ]
+            }
+
+## Property Widget Tenant Occupancy [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/widget-tenant-occupancy]
+### Property Widget Tenant Occupancy [GET]
+Widget of Tenant Occupancy.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "datatable": [
+                        [
+                            "Tenants",
+                            "Percentage"
+                        ],
+                        [
+                            "Clemens",
+                            17.10204081632653
+                        ],
+                        [
+                            "LabEco",
+                            13.142857142857142
+                        ],
+                        [
+                            "LaBoutik",
+                            36.244897959183675
+                        ],
+                        [
+                            "Vacant",
+                            33.51020408163266
+                        ]
+                    ],
+                    "slices": {
+                        "0": {
+                            "color": "#a21c7c"
+                        },
+                        "1": {
+                            "color": "#edb6f0"
+                        },
+                        "2": {
+                            "color": "#f9698f"
+                        },
+                        "3": {
+                            "color": "#ffffff"
+                        }
+                    },
+                    "legend": [
+                        {
+                            "color": "#a21c7c",
+                            "tenant": "Clemens",
+                            "percent": 17.10204081632653
+                        },
+                        {
+                            "color": "#edb6f0",
+                            "tenant": "LabEco",
+                            "percent": 13.142857142857142
+                        },
+                        {
+                            "color": "#f9698f",
+                            "tenant": "LaBoutik",
+                            "percent": 36.244897959183675
+                        },
+                        {
+                            "color": "#ffffff",
+                            "tenant": "Vacant",
+                            "percent": 33.51020408163266
+                        }
+                    ]
+                }
+            }
