@@ -3265,3 +3265,178 @@ Widget of Tenant Occupancy.
                     ]
                 }
             }
+
+## Group Notifications
+## User Notification List [/notifications]
+### User Notification List [GET]
+Get list of User Notification. `token` is required.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": [
+                    {
+                        "id": 1,
+                        "message": "prospectCreate",
+                        "resource": {
+                            "customer": {
+                                "id": 10,
+                                "name": "Cexas Thicken"
+                            },
+                            "portfolio": {
+                                "id": 119,
+                                "name": "Group Angker"
+                            },
+                            "property": {
+                                "id": 347,
+                                "name": "Prospective Property"
+                            },
+                            "actor": {
+                                "id": 7,
+                                "name": "Hendy"
+                            },
+                            "prospect": {
+                                "id": 99,
+                                "name": "pt WGS"
+                            }
+                        },
+                        "readDate": null,
+                        "bookmarkDate": null
+                    }
+                ]
+            }
+
+## User Notification Detail [/notifications/{notificationId}]
+### User Notification Detail [GET]
+Get detail (singular data) of Notification. `token` is required.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 1,
+                    "message": "prospectCreate",
+                    "resource": {
+                        "customer": {
+                            "id": 10,
+                            "name": "Cexas Thicken"
+                        },
+                        "portfolio": {
+                            "id": 119,
+                            "name": "Group Angker"
+                        },
+                        "property": {
+                            "id": 347,
+                            "name": "Prospective Property"
+                        },
+                        "actor": {
+                            "id": 7,
+                            "name": "Hendy"
+                        },
+                        "prospect": {
+                            "id": 99,
+                            "name": "pt WGS"
+                        }
+                    },
+                    "readDate": null,
+                    "bookmarkDate": null
+                }
+            }
+
+## User Notification Action: Bookmark [/notifications/{notificationId}/bookmark]
+### User Notification Action: Bookmark [POST]
+Bookmark a notification.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 1,
+                    "message": "prospectCreate",
+                    "resource": {
+                        "customer": {
+                            "id": 10,
+                            "name": "Cexas Thicken"
+                        },
+                        "portfolio": {
+                            "id": 119,
+                            "name": "Group Angker"
+                        },
+                        "property": {
+                            "id": 347,
+                            "name": "Prospective Property"
+                        },
+                        "actor": {
+                            "id": 7,
+                            "name": "Hendy"
+                        },
+                        "prospect": {
+                            "id": 99,
+                            "name": "pt WGS"
+                        }
+                    },
+                    "readDate": null,
+                    "bookmarkDate": "2018-02-06 13:40:03"
+                }
+            }
+
+## User Notification Action: Mark as Read [/notifications/{notificationId}/read]
+### User Notification Action: Mark as Read [GET]
+Mark as read a notification.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "id": 1,
+                    "message": "prospectCreate",
+                    "resource": {
+                        "customer": {
+                            "id": 10,
+                            "name": "Cexas Thicken"
+                        },
+                        "portfolio": {
+                            "id": 119,
+                            "name": "Group Angker"
+                        },
+                        "property": {
+                            "id": 347,
+                            "name": "Prospective Property"
+                        },
+                        "actor": {
+                            "id": 7,
+                            "name": "Hendy"
+                        },
+                        "prospect": {
+                            "id": 99,
+                            "name": "pt WGS"
+                        }
+                    },
+                    "readDate": "2018-02-06 13:42:42",
+                    "bookmarkDate": null
+                }
+            }
