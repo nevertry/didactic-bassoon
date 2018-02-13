@@ -48,75 +48,269 @@ Reset password from valid token.
 
             {
                 "code": 0,
-                "message": "Success",
+                "message": "Login has been successfully.",
                 "data": {
-                    "id": 69,
-                    "civility": "mr",
-                    "lastName": "Carl",
-                    "firstName": "Jo",
-                    "email": "user@example.com",
-                    "mobilePhone": "",
-                    "officePhone": "",
-                    "jobTitle": "Brother",
-                    "isGuest": false,
-                    "isCustomer": true,
-                    "isActive": true,
-                    "profilePicPath": "",
-                    "customers": [
-                        {
-                            "id": 5,
-                            "fullName": "PT. Maju Bersama",
-                            "tradeName": "Raharjo",
-                            "vatOption": 0,
-                            "active": 1,
-                            "intercommunityVat": null,
-                            "vat": null,
+                    "userType": "customer",
+                    "token": "XXX",
+                    "user": {
+                        "id": 1,
+                        "civility": "mr",
+                        "lastName": "User",
+                        "firstName": "Sample",
+                        "email": "user@example.com",
+                        "mobilePhone": "08777111",
+                        "officePhone": "02155",
+                        "jobTitle": "Admin",
+                        "isGuest": false,
+                        "isCustomer": false,
+                        "isActive": true,
+                        "profilePicPath": "uploads/users/1500357858_8219faf92f20bb0c216fca2d875ef952.jpg",
+                        "companyList": null,
+                        "color": "#67e9ba",
+                        "accesses": [
+                            {
+                                "id": 36,
+                                "isPowerUser": true,
+                                "profile": {
+                                    "id": 2,
+                                    "name": "Asset Manager",
+                                    "description": null,
+                                    "slug": "asset-manager",
+                                    "protected": true,
+                                    "permissions": [
+                                        {
+                                            "portfolio.manage": true
+                                        },
+                                        {
+                                            "portfolio.delete": true
+                                        },
+                                        {
+                                            "property.manage": true
+                                        },
+                                        {
+                                            "property.delete": true
+                                        },
+                                        {
+                                            "contract.read": true
+                                        },
+                                        {
+                                            "contract.manage": true
+                                        },
+                                        {
+                                            "contract.delete": true
+                                        },
+                                        {
+                                            "contract.validate": true
+                                        },
+                                        {
+                                            "tenancy-schedule.read": true
+                                        },
+                                        {
+                                            "tenancy-schedule.download": true
+                                        },
+                                        {
+                                            "crm-prospect.read": true
+                                        },
+                                        {
+                                            "crm-prospect.manage": true
+                                        },
+                                        {
+                                            "crm-prospect.delete": true
+                                        },
+                                        {
+                                            "crm-transaction.read": true
+                                        },
+                                        {
+                                            "crm-transaction.manage": true
+                                        },
+                                        {
+                                            "crm-transaction.delete": true
+                                        },
+                                        {
+                                            "crm-competitor.read": true
+                                        },
+                                        {
+                                            "crm-competitor.manage": true
+                                        },
+                                        {
+                                            "crm-competitor.delete": true
+                                        },
+                                        {
+                                            "cashflow.read": true
+                                        },
+                                        {
+                                            "dataroom.edit": true
+                                        },
+                                        {
+                                            "dataroom.document-upload": true
+                                        },
+                                        {
+                                            "dataroom.document-delete": true
+                                        },
+                                        {
+                                            "kpi.lettable-area.read": true
+                                        },
+                                        {
+                                            "kpi.occupied-area.read": true
+                                        },
+                                        {
+                                            "kpi.annual-income.read": true
+                                        },
+                                        {
+                                            "kpi.occupation-rate.read": true
+                                        },
+                                        {
+                                            "kpi.property-value.read": true
+                                        },
+                                        {
+                                            "kpi.average-economic-rent-signature.read": true
+                                        },
+                                        {
+                                            "kpi.tenant.read": true
+                                        },
+                                        {
+                                            "kpi.current-capex-program.read": true
+                                        },
+                                        {
+                                            "kpi.debt.read": true
+                                        },
+                                        {
+                                            "kpi.recoverable-charge-tax.read": true
+                                        },
+                                        {
+                                            "kpi.average-face-rent-signature.read": true
+                                        },
+                                        {
+                                            "kpi.erv.read": true
+                                        },
+                                        {
+                                            "kpi.average-face-rent.read": true
+                                        },
+                                        {
+                                            "kpi.wale.read": true
+                                        },
+                                        {
+                                            "stacking-plan.read": true
+                                        },
+                                        {
+                                            "next-break.read": true
+                                        }
+                                    ],
+                                    "familyProfile": {
+                                        "id": 2,
+                                        "name": "Asset Manager",
+                                        "slug": "asset-manager",
+                                        "protected": true
+                                    }
+                                },
+                                "customer": {
+                                    "id": 36,
+                                    "fullName": "DEMO",
+                                    "tradeName": "DEMO",
+                                    "vatOption": 0,
+                                    "active": 1,
+                                    "intercommunityVat": null,
+                                    "vat": null,
+                                    "siren": null,
+                                    "naf": null,
+                                    "iban": "FR7630001007941234567890185",
+                                    "accountName": "BKCOORD",
+                                    "swift": "FRFRFR76300",
+                                    "addressOption": 1,
+                                    "addresses": [
+                                        {
+                                            "id": 63,
+                                            "addressType": "headquarter",
+                                            "address": {
+                                                "id": 424,
+                                                "address1": "4, Yonge Street",
+                                                "address2": null,
+                                                "zipcode": "45000",
+                                                "city": "Richmond Hill",
+                                                "country": "Canada",
+                                                "lat": 43.9159154,
+                                                "lng": -79.4481472
+                                            }
+                                        },
+                                        {
+                                            "id": 64,
+                                            "addressType": "billing",
+                                            "address": {
+                                                "id": 425,
+                                                "address1": null,
+                                                "address2": null,
+                                                "zipcode": null,
+                                                "city": null,
+                                                "country": null,
+                                                "lat": 48.6670602,
+                                                "lng": 1.8179955
+                                            }
+                                        }
+                                    ],
+                                    "customerImg": [
+                                        "uploads/customers/1506088646_2cdb50693f36b47f1fdd6719a872a055.jpeg"
+                                    ],
+                                    "raisonSociale": {
+                                        "id": 3,
+                                        "code": "M03",
+                                        "label": "SARL"
+                                    },
+                                    "company": {
+                                        "id": 67,
+                                        "address": {
+                                            "id": 424,
+                                            "address1": "4, Yonge Street",
+                                            "address2": null,
+                                            "zipcode": "45000",
+                                            "city": "Richmond Hill",
+                                            "country": "Canada",
+                                            "lat": 43.9159154,
+                                            "lng": -79.4481472
+                                        },
+                                        "fullName": "DEMO",
+                                        "tradeName": "DEMO",
+                                        "raisonSociale": {
+                                            "id": 3,
+                                            "code": "M03",
+                                            "label": "SARL"
+                                        },
+                                        "intercommunityVat": null,
+                                        "naf": null,
+                                        "siren": null,
+                                        "vat": null,
+                                        "vatOption": 0
+                                    }
+                                },
+                                "resources": {
+                                    "portfolios": []
+                                }
+                            }
+                        ],
+                        "company": {
+                            "id": 9,
+                            "address": {
+                                "id": 34,
+                                "address1": "Paris",
+                                "address2": null,
+                                "zipcode": "83470",
+                                "city": "Var",
+                                "country": "Prancis",
+                                "lat": 43.4941437,
+                                "lng": 5.8932809
+                            },
+                            "fullName": "TEST 12",
+                            "tradeName": "TEST14JULY",
+                            "raisonSociale": {
+                                "id": 1,
+                                "code": "M01",
+                                "label": "SOCIETE"
+                            },
+                            "intercommunityVat": "TSET11001010",
+                            "naf": "TEST10101010",
                             "siren": null,
-                            "naf": "12345",
-                            "iban": "FR21 2129 8192 8182 9182 9182 9182 9189 28",
-                            "accountName": "Raharjo Iman",
-                            "swift": "HFJK EH SK FHS",
-                            "addressOption": 1,
-                            "customerImg": [
-                                ""
-                            ],
-                            "created_at": "2017-07-13 03:42:28"
+                            "vat": null,
+                            "vatOption": 1
                         }
-                    ],
-                    "roles": null,
-                    "companyList": [
-                        {
-                            "id": 5,
-                            "name": "PT. Maju Bersama",
-                            "companyId": 6,
-                            "customerId": 5
-                        }
-                    ],
-                    "color": "#2e2ba0",
-                    "company": {
-                        "id": 2,
-                        "address": {
-                            "id": 6,
-                            "address1": "Gg. IV",
-                            "address2": null,
-                            "zipcode": "61471",
-                            "city": "Kabupaten Jombang",
-                            "country": "Indonesia",
-                            "lat": -7.5869954,
-                            "lng": 112.2543901
-                        },
-                        "fullName": "PT. WGS",
-                        "tradeName": "Padrin Panji",
-                        "raisonSociale": {
-                            "id": 5,
-                            "code": "M14",
-                            "label": "EURL"
-                        },
-                        "intercommunityVat": "VAT122231",
-                        "naf": null,
-                        "siren": "000 000 000",
-                        "vat": null,
-                        "vatOption": 0
                     }
                 }
             }
