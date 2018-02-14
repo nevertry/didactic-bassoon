@@ -1163,11 +1163,229 @@ Get detail of Property. Parameter `propertyId` is required on update.
 + Request (application/json)
 
         {
-            "dateStart": "2017-01-01",
-            "dateEnd": "2017-12-31",
-            "leaseEnd": "break-date",
-            "indexation": 1,
-            "inflation": 1
+            "id": null,
+            "name": "newProperty",
+            "code": "prop1",
+            "address": {
+              "address1": "Jalan Jati Rawasari",
+              "address2": "",
+              "zipcode": "10520",
+              "city": "Kota Jakarta Pusat",
+              "country": "Indonesia",
+              "lat": -6.1838368,
+              "lng": 106.86288059999993
+            },
+            "images": [
+              "uploads/properties/1518595695_d31e6d9758d1ff54bfddb08a5e7fcd9b.png"
+            ],
+            "unit": "m²",
+            "currency": {
+              "id": 2,
+              "code": "$",
+              "name": "US Dollar"
+            },
+            "constructionYear": 2018,
+            "restructurationYear": [
+              2018
+            ],
+            "typology": {
+              "id": 2,
+              "code": "2",
+              "hasLoyer": true,
+              "label": "Bureaux"
+            },
+            "sdp": "1200",
+            "numberOfParking": 10,
+            "measurementUnit": {
+              "id": 1,
+              "code": "m²",
+              "name": "square meter",
+              "meterConversionRate": 1
+            },
+        
+            "crlOption": false,
+            "company": {
+              "id": 67,
+              "address": {
+                "id": 424,
+                "address1": "Jalan Haji Entong Usan",
+                "address2": null,
+                "zipcode": "16166",
+                "city": "Kota Bogor",
+                "country": "Indonesia",
+                "lat": -6.5422305,
+                "lng": 106.76937539999994
+              },
+              "fullName": "DEMO",
+              "tradeName": "DEMO",
+              "raisonSociale": {
+                "id": 3,
+                "code": "M03",
+                "label": "SARL"
+              },
+              "intercommunityVat": null,
+              "naf": null,
+              "siren": null,
+              "vat": null,
+              "vatOption": 0
+            },
+        
+            "coPro": false,
+            "coProCompanyName": null,
+            "coProContactName": null,
+            "coProContactEmail": null,
+            "coProContactPhone": null,
+            "volumeDivided": false,
+            "asl": false,
+            "aful": false,
+            "servitude": false,
+            "zac": false,
+            "igh": false,
+            "erp": false,
+            "icpe": false,
+            "rie": false,
+            "subdivision": false,
+            "commercialUrbanism": true,
+            "expertiseCIBE": false,
+            "cotationCIBE": 0,
+            "expertiseCELOG": false,
+            "cotationCELOG": 0,
+            "greenCertificationOption": false,
+            "hqe": false,
+            "leed": false,
+            "breeam": false,
+        
+            "buildingOption": false,
+            "numberBuilding": 1,
+            "buildingList": [
+              {
+                "floor": 12,
+                "parkingFloor": 1,
+                "lots": [
+                  {
+                    "id": null,
+                    "index": 0,
+                    "lotIndex": null,
+                    "code": "ter12",
+                    "sdp": 12345,
+                    "typology": {
+                      "id": 21,
+                      "code": "7A",
+                      "hasLoyer": false,
+                      "label": "Parking simple"
+                    },
+                    "floor": 12,
+                    "etage": "",
+                    "comment": "",
+                    "claimOption": false,
+                    "duplicateGroup": "1HWXZ",
+                    "applyDuplicate": false,
+                    "outdoorParking": false,
+                    "isGroup": false,
+                    "contracts": []
+                  },
+                  {
+                    "id": null,
+                    "index": 1,
+                    "lotIndex": null,
+                    "code": "ter13",
+                    "sdp": 12345,
+                    "typology": {
+                      "id": 21,
+                      "code": "7A",
+                      "hasLoyer": false,
+                      "label": "Parking simple"
+                    },
+                    "floor": 12,
+                    "etage": "",
+                    "comment": "",
+                    "claimOption": false,
+                    "duplicateGroup": "1HWXZ",
+                    "applyDuplicate": false,
+                    "outdoorParking": false,
+                    "isGroup": false,
+                    "contracts": []
+                  }
+                ],
+                "name": "tesProperty",
+                "surfaceSUBL": "1200",
+                "parkingNumber": 10,
+                "mainUsage": {
+                  "id": 2,
+                  "code": "2",
+                  "hasLoyer": true,
+                  "label": "Bureaux"
+                }
+              }
+            ],
+            "totalArea": 0,
+        
+            "publicPageOption": true,
+            "publicPage": {
+              "id": 0,
+              "imagesActive": true,
+              "buildingAddressActive": false,
+              "buildingAddress": null,
+              "googleEarthLinkActive": false,
+              "googleEarthLink": null,
+              "geolocActive": false,
+              "geolocLat": 0,
+              "geolocLng": 0,
+              "buildingDescriptionActive": false,
+              "buildingDescription": null,
+              "buildingZoneDescriptionActive": false,
+              "buildingZoneDescription": null,
+              "publicTransportationAccessActive": false,
+              "publicTransportationAccess": null,
+              "amenitiesActive": false,
+              "amenitiesConference": false,
+              "amenitiesElectricalPlug": false,
+              "amenitiesGarden": false,
+              "amenitiesCorporateRestaurant": false,
+              "amenitiesCafetaria": false,
+              "amenitiesBikeRoom": false,
+              "amenitiesFitnessCenter": false,
+              "amenitiesRetail": false,
+              "amenitiesConciergeServices": false,
+              "amenitiesErp": false,
+              "lettableAreaActive": false,
+              "lettableArea": 0,
+              "lettableAreaDetailsActive": false,
+              "lettableAreaDetails": null,
+              "propertyValueActive": false,
+              "propertyValue": null,
+              "occupationRateActive": false,
+              "occupationRate": null,
+              "occupiedSpacesActive": false,
+              "occupiedSpaces": null,
+              "vacantSpacesActive": false,
+              "vacantSpaces": null,
+              "averageFloorAreaActive": false,
+              "averageFloorArea": null,
+              "numberOfFloorActive": false,
+              "numberOfFloor": null,
+              "stackingPlanActive": false,
+              "stackingPlanTenantActive": false,
+              "brokerActive": false,
+              "propertyManagerActive": false,
+              "assetManagerActive": false,
+              "websiteActive": false,
+              "website": null
+            },
+        
+            "tempValue": "12.00",
+            "tempDebt": "23.00",
+            "tempCapex": 13,
+            "tempCharges": 21,
+            "tempErv": 32,
+            "propertyLocales": [
+              {
+                "id": 1
+              },
+              {
+                "id": 2
+              }
+            ]
         }
 
 + Response 200 (application/json)
