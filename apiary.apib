@@ -1384,6 +1384,27 @@ Get detail of cashflow. See full response here: https://gist.github.com/nevertry
                 }
             }
 
+## Property Cashflow Export [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/cashflow/export/{type}]
+### Property Cashflow Export [POST]
+download cashflow
+
++ Request (application/json)
+
+        {
+            "dateStart": "2015-01-01"
+            "dateEnd": "2025-12-31"
+            "leaseEnd": "break-date"
+            "indexation": 1
+            "inflation": 1
+        }
+        
++ Response 200 (application/json)
+
+    + Body
+        
+            {
+            }
+
 ## Group Property Lease
 
 ## Property Lease List [/companies/{customerId}/portfolios/{portfolioId}/properties/{propertyId}/contracts]
