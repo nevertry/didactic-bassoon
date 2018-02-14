@@ -666,6 +666,32 @@ Get Portfolio Details.
                 }
             }
 
+## Portfolio Dashboard Widget List [/companies/{customerId}/portfolios/{portfolioId}/dashboard-widgets]
+### Portfolio Dashboard Widget List [GET]
+Get Portfolio Dashboard Widget List.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "widgets": [
+                        "property",
+                        "tenant",
+                        "occupation",
+                        "income",
+                        "valorisation",
+                        "broker",
+                        "leasing"
+                    ]
+                }
+            }
+
 ## Group Property
 ## Property List [/companies/{customerId}/portfolios/{portfolioId}/properties]
 ### Property List [GET]
