@@ -692,6 +692,65 @@ Get Portfolio Dashboard Widget List.
                 }
             }
 
+## Portfolio Dashboard Widget Reorder [/companies/{customerId}/portfolios/{portfolioId}/dashboard-widgets/reorder]
+### Portfolio Dashboard Widget Reorder [POST]
+Get Portfolio Dashboard Widget List.
+
++ Request (application/json)
+
+        {
+            "widgets": [
+                {
+                    "name" : "tenant"
+                    "order": "1"
+                },
+                {
+                    "name" : "property"
+                    "order": "2"
+                },
+                {
+                    "name" : "occupation"
+                    "order": "3"
+                },
+                {
+                    "name" : "income"
+                    "order": "4"
+                },
+                {
+                    "name" : "valorisation"
+                    "order": "5"
+                },
+                {
+                    "name" : "broker"
+                    "order": "6"
+                },
+                {
+                    "name" : "leasing"
+                    "order": "7"
+                },
+            ],
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": "Success",
+                "data": {
+                    "widgets": [
+                        "tenant",
+                        "property",
+                        "occupation",
+                        "income",
+                        "valorisation",
+                        "broker",
+                        "leasing"
+                    ]
+                }
+            }
+
 ## Group Property
 ## Property List [/companies/{customerId}/portfolios/{portfolioId}/properties]
 ### Property List [GET]
